@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Rentals</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<img src="car logo.jpg" alt="Logo" class="logo">
+		<h1>Car Rentals</h1>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#about-us">About Us</a></li>
+			<li><a href="#contact-us">Contact Us</a></li>
+			<li><a href="#">Login</a></li>
+			<li>
+				<form id="search-form">
+					<input type="search" id="search-input" placeholder="Search cars">
+				</form>
+			</li>
+			<div id="no-results" style="display: none; text-align: center; margin-top: 20px; color: #777;">
+				No cars found matching your search.
+			</div>
+			
+			
+		</ul>
+	</div>
+	
+	
+
+	<div class="content">
+		<div class="card bg-silver">
+			<img src="toyota 1.jpeg" alt="Toyota Corolla">
+			<h2>Toyota Corolla</h2>
+			<p>Automatic, 4 doors, 5 seats</p>
+			<p>Price: $40/day</p>
+			<button class="book-now-btn" data-car="Toyota Corolla">Book Now</button>
+		</div>
+		<div class="card bg-silver">
+			<img src="civic.jpeg" alt="Honda Civic">
+			<h2>Honda Civic</h2>
+			<p>Manual, 2 doors, 4 seats</p>
+			<p>Price: $35/day</p>
+			<button class="book-now-btn" data-car="Honda Civic">Book Now</button>
+		</div>
+		<div class="card bg-silver">
+			<img src="c class.jpeg" alt="Mercedes-Benz C-Class">
+			<h2>Mercedes-Benz C-Class</h2>
+			<p>Automatic, 4 doors, 5 seats</p>
+			<p>Price: $60/day</p>
+			<button class="book-now-btn" data-car="Mercedes-Benz C-Class">Book Now</button>
+		</div>
+		<div class="card bg-silver">
+			<img src="mg.jpeg" alt="MG Hector">
+			<h2>MG Hector</h2>
+			<p>Automatic, 5 doors, 5 seats</p>
+			<p>Price: $50/day</p>
+			<button class="book-now-btn" data-car="MG Hector">Book Now</button>
+		</div>
+		<div class="card bg-silver">
+			<img src="ciaz.jpeg" alt="Maruti Suzuki Ciaz">
+			<h2>Maruti Suzuki Ciaz</h2>
+			<p>Manual, 4 doors, 5 seats</p>
+			<p>Price: $30/day</p>
+			<button class="book-now-btn" data-car="Maruti Suzuki Ciaz">Book Now</button>
+		</div>
+		<div class="card bg-silver">
+			<img src="tata.jpeg" alt="Tata Harrier">
+			<h2>Tata Harrier</h2>
+			<p>Automatic, 5 doors, 5 seats</p>
+			<p>Price: $55/day</p>
+			<button class="book-now-btn" data-car="Tata Harrier">Book Now</button>
+		</div>
+		<div class="card bg-silver">
+			<img src="700.jpeg" alt="Mahindra XUV700">
+			<h2>Mahindra XUV700</h2>
+			<p>Automatic, 5 doors, 7 seats</p>
+			<p>Price: $65/day</p>
+			<button class="book-now-btn" data-car="Mahindra XUV700">Book Now</button>
+		</div>
+		<div class="card bg-silver">
+			<img src="fortuner.jpeg" alt="Toyota Fortuner">
+			<h2>Toyota Fortuner</h2>
+			<p>Automatic, 5 doors, 7 seats</p>
+			<p>Price: $60/day</p>
+			<button class="book-now-btn">Book Now</button>
+		</div>
+		<div class="card bg-silver">
+			<img src="scorpio.jpeg" alt="Mahindra Scorpio">
+			<h2>Mahindra Scorpio</h2>
+			<p>Manual, 5 doors, 7 seats</p>
+			<p>Price: $55/day</p>
+			<button class="book-now-btn" data-car="Mahindra Scorpio">Book Now</button>
+		</div>
+		<div class="card bg-silver">
+			<img src="ford.jpeg" alt="Ford Endeavour">
+			<h2>Ford Endeavour</h2>
+			<p>Automatic, 5 doors, 7 seats</p>
+			<p>Price: $65/day</p>
+			<button class="book-now-btn">Book Now</button> 
+		</div>
+		
+		
+	</div>
+	<div class="booking-section" id="book-now">
+		<h2>Book Your Ride</h2>
+		<p>Ready to hit the road? Choose your car, select your dates, and start your journey with ease!</p>
+		<div class="booking-container">
+			<form class="booking-form">
+				<div class="form-group">
+					<label for="pickup-location">Pickup Location:</label>
+					<input type="text" id="pickup-location" name="pickup-location" placeholder="Enter Pickup Location" required>
+				</div>
+				<div class="form-group">
+					<label for="dropoff-location">Dropoff Location:</label>
+					<input type="text" id="dropoff-location" name="dropoff-location" placeholder="Enter Dropoff Location" required>
+				</div>
+				<div class="form-group">
+					<label for="pickup-date">Pickup Date:</label>
+					<input type="date" id="pickup-date" name="pickup-date" required>
+				</div>
+				<div class="form-group">
+					<label for="dropoff-date">Dropoff Date:</label>
+					<input type="date" id="dropoff-date" name="dropoff-date" required>
+				</div>
+				<div class="form-group">
+					<label for="car-select">Select Car:</label>
+					<select id="car-select" name="car-select" required>
+						<option value="" disabled selected>Select a car</option>
+						<option value="Toyota Corolla">Toyota Corolla</option>
+						<option value="Honda Civic">Honda Civic</option>
+						<option value="Mercedes-Benz C-Class">Mercedes-Benz C-Class</option>
+						<option value="MG Hector">MG Hector</option>
+						<option value="Maruti Suzuki Ciaz">Maruti Suzuki Ciaz</option>
+						<option value="Tata Harrier">Tata Harrier</option>
+						<option value="Mahindra XUV700">Mahindra XUV700</option>
+						<option value="Toyota Fortuner">Toyota Fortuner</option>
+						<option value="Mahindra Scorpio">Mahindra Scorpio</option>
+						<option value="Ford Endeavour">Ford Endeavour</option>
+					</select>
+				</div>
+				<button type="submit" class="submit-btn">Confirm Booking</button>
+			</form>
+			<div class="booking-image">
+				<img src="c class.jpeg" alt="Happy Journey">
+			</div>
+		</div>
+	</div>
+	
+	<div class="about-us" id="about-us">
+		<h2>About Us</h2>
+		<p>At <strong>Car Rentals</strong>, we are dedicated to making your journeys smooth, safe, and memorable. With a fleet of high-quality vehicles and top-notch customer service, we are here to cater to all your travel needs.</p>
+		<div class="about-container">
+			<!-- About Content -->
+			<div class="about-text">
+				<h3>Who We Are</h3>
+				<p>We are a leading car rental service provider with years of experience in delivering exceptional travel solutions. Whether you need a vehicle for a family trip, business travel, or a solo adventure, we have the perfect car for you.</p>
+				<h3>Our Mission</h3>
+				<p>To provide affordable, reliable, and hassle-free car rental services that exceed customer expectations. Your comfort and satisfaction are our top priorities.</p>
+				<h3>Why Choose Us?</h3>
+				<ul>
+					<li>Wide range of well-maintained vehicles.</li>
+					<li>Affordable pricing with no hidden costs.</li>
+					<li>24/7 customer support and roadside assistance.</li>
+					<li>Easy booking process with flexible options.</li>
+				</ul>
+			</div>
+			<!-- About Image -->
+			<div class="about-image">
+				<img src="1.jpeg" alt="Our Team at Work">
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="team-section" id="team">
+		<h2>Meet Our Team</h2>
+		<p>We’re a group of passionate individuals dedicated to providing the best car rental services for you.</p>
+		<div class="team-container">
+			<div class="team-member">
+				<img src="john-doe.jpg" alt="John Doe">
+				<h4>John Doe</h4>
+				<p>CEO</p>
+				<div class="social-links">
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+			</div>
+			<div class="team-member">
+				<img src="jane-smith.jpg" alt="Jane Smith">
+				<h4>Jane Smith</h4>
+				<p>Operations Manager</p>
+				<div class="social-links">
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+			</div>
+			<div class="team-member">
+				<img src="alex-jones.jpg" alt="Alex Jones">
+				<h4>Alex Jones</h4>
+				<p>Marketing Lead</p>
+				<div class="social-links">
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+			</div>
+			<!-- Add more team members here if needed -->
+		</div>
+	</div>
+	
+			<!-- Add more team members here -->
+		</div>
+	</div>
+	
+	<div class="contact-us" id="contact-us">
+		<h2>Contact Us</h2>
+		<p>We would love to hear from you! Fill out the form below or use the provided contact information to get in touch.</p>
+		<div class="contact-container">
+			<!-- Contact Form -->
+			<div class="contact-form">
+				<form>
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" id="name" placeholder="Your Name" required>
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="email" id="email" placeholder="Your Email" required>
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone:</label>
+						<input type="tel" id="phone" placeholder="Your Phone Number" required>
+					</div>
+					<div class="form-group">
+						<label for="message">Message:</label>
+						<textarea id="message" rows="5" placeholder="Your Message"></textarea>
+					</div>
+					<button type="submit" class="send-btn">Send Message</button>
+				</form>
+			</div>
+			<!-- Contact Information -->
+			<div class="contact-info">
+				<h3>Our Office</h3>
+				<p><i class="fas fa-map-marker-alt"></i> Jaipur,Rajasthan</p>
+				<p><i class="fas fa-phone-alt"></i> +91 957163****</p>
+				<p><i class="fas fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+				<div class="social-links">
+					<h4>Follow Us</h4>
+					<a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+				</div>
+			</div>
+		</div>
+		<!-- Embedded Map -->
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7116.564909421349!2d75.83071695!3d26.894529549999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6eb4ec12795%3A0xe407f954ccdaef5!2sRaja%20Park%2C%20Jaipur%2C%20Rajasthan%20302007!5e0!3m2!1sen!2sin!4v1722496380694!5m2!1sen!2sin" 
+				width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	<script src="script.js"></script>
+
+</body>
+</html>
+
+
